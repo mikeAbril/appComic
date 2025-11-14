@@ -17,6 +17,8 @@ const props = defineProps({
     },
     image: {
         type: String,
+       
+
     },
     colorFondo: {
         type: String,
