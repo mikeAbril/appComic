@@ -2,20 +2,17 @@
 <div class="principal">
   <footer>
     <div class="q-pa-md">
-        <div class="q-gutter-y-md" style="max-width: 600px">
+        <div class="q-gutter-y-md" style="margin: 0 auto;">
           <q-tabs
             v-model="tab"
             class="text-teal"
           >
-            <q-tab name="Comidas" icon="alarm" label="Alarms" />
-            <q-tab name="Entrenamientos" icon="movie" label="Movies" />
+            <q-tab name="Comidas" icon="food_bank" label="comidas" />
+            <q-tab name="Entrenamientos" icon="fitness_center" label="entrenos" />
           </q-tabs>
         <!-- contenido   -->
           <q-tab-panels v-model="tab" animated>
-            <q-tab-panel name="mails">
-              <h4>Mails content</h4>
-            </q-tab-panel>
-
+            
             <q-tab-panel name="comidas">
               <h4>Alarms content</h4>
             </q-tab-panel>
@@ -50,4 +47,5 @@ const tab = ref('comidas')
     border-radius: 10px;
     width: 400px;
 }
+
 </style>
