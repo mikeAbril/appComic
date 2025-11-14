@@ -1,6 +1,6 @@
 <template>
     <div :style="{ backgroundColor: props.colorFondo }">
-    <h2>{{ props.title }}</h2>
+    <h4>{{ props.title }}</h4>
     <img v-if="props.image" :src="props.image" alt="Imagen" />
   </div>
 </template>
