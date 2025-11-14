@@ -1,13 +1,23 @@
 <template>
     <div class="principal">
-        <div class="card">
-            <cards title="Desayuno" :image="desayuno" colorFondo=""></cards>
-        </div>
-        <div class="card">
-            <cards title="Almuerzo" :image="almuerzo" colorFondo=""></cards>
-        </div>
-        <div class="card">
-            <cards title="Cena" :image="cena" colorFondo=""></cards>
+        <h1>{{ }}</h1>
+        <div class="parteUno">
+            <div class="card">
+                <cards title="Desayuno" :image="desayuno" colorFondo=""></cards>
+                <botones @accion ="agregar" colorFondo = "red" textoColor = "black" nombreBoton="Agregar Alimento"></botones>
+            </div>
+            <div class="card">
+                <cards title="Almuerzo" :image="almuerzo" colorFondo=""></cards>
+                <botones @accion ="agregar" colorFondo = "red" textoColor = "black" nombreBoton="Agregar Alimento"></botones>
+            </div>
+            <div class="card">
+                <cards title="Cena" :image="cena" colorFondo=""></cards>
+                <botones @accion ="agregar" colorFondo = "red" textoColor = "black" nombreBoton="Agregar Alimento"></botones>
+            </div>
+            <div class="card">
+                <cards title="Bebidas" :image="bebidas" colorFondo=""></cards>
+                <botones @accion ="agregar" colorFondo = "red" textoColor = "black" nombreBoton="Agregar Alimento"></botones>
+            </div>
         </div>
         <footer>
             <div class="q-pa-md">
@@ -39,21 +49,45 @@
 <script setup>
 import { ref } from 'vue';
 import cards from './components/cards.vue';
-import cards from './components/cards.vue';
-import desayuno from './assets/desayuno.png'
-import almuerzo from './assets/almuerzo.png'
-import cena from './assets/cena.png'
+import botones from './components/botones.vue';
+import desayuno from './assets/desayuno.png';
+import almuerzo from './assets/almuerzo.png';
+import cena from './assets/cena.png';
+import bebidas from './assets/bebidas.png';
 
 const tab = ref('comidas')
 
+function agregar(){
+console.log("");
 
+}
 </script>
 
 
 <style>
+.parteUno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
 .card {
-    border: solid 2px red;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: solid 2px #009688;
     border-radius: 10px;
     width: 400px;
+}
+
+.card h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.card img {
+    width: 230px;
+    border: solid 1px;
+    border-radius: 50%;
 }
 </style>
