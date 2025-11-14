@@ -13,7 +13,7 @@ import App from './App.vue'
 
 const app = createApp(App)
 
-myApp.use(Quasar, {
+app.use(Quasar, {
   plugins: {}, // import Quasar plugins and add here
 })
 

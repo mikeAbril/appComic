@@ -1,10 +1,8 @@
 <template>
 <div class="principal">
-
-
   <footer>
      <div class="q-pa-lg flex flex-center">
-    <q-pagination
+    <QPagination
       v-model="current"
       color="black"
       :max="10"
@@ -18,7 +16,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { QPagination } from 'quasar';
 
+const current = ref(5)
 </script>
 
 

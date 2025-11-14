@@ -1,6 +1,6 @@
 <template>
    <div> 
-    <div title = "" color = "" > </div>
+    <div title = "" colorFondo = "" > </div>
    </div> 
 </template>
 
@@ -11,8 +11,13 @@ import { defineProps } from 'vue';
 const props = defineProps ({
     title:{
         type: String,
-        description: String,
-        
-    }
+        description: String,      
+    },
+    coloFondo:{
+        type: String,
+        required: true,
+        default: ""
+    },
+    
 })
 </script>
